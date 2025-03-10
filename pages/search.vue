@@ -6,8 +6,9 @@ const { search } = route.query;
 // const data = computed(() =>
 // 	search ? products.filter((item) => item.title.includes(search)) : []
 // );
-const data = products.filter((item, index) => item.title.includes(search));
-console.log(data.value, "filtered data");
+const data = products.filter((item, index) =>
+	item.title.toLowerCase().includes(search.toLowerCase())
+);
 </script>
 
 <template>
